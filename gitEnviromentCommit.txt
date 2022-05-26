@@ -1,0 +1,6 @@
+echo "kamikaze-avatar-sdk" >> README.md
+git init
+git add README.md
+git commit -m "initial commit"
+git remote add origin https://github.com/PM-HaruoMorohashi/test_repo.git
+git push -u origin main
