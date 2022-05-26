@@ -1,0 +1,19 @@
+{
+    "sex": "male",
+    "assetOwner": "POCKETRD",
+    "bodyGroupId": "BaseAvatar",
+    "bodyId": "VC_Male_0001",
+    "mobile": {
+        "avatarType": "Real",
+        "executionDevice": "avatarEditor",
+        "asset": {
+            "glasses": {
+                "scale": {
+                    "x": 0.9743590173048844,
+                    "y": 1.0050724380258202,
+                    "z": 0.9789129790015849
+                }
+            }
+        }
+    }
+}

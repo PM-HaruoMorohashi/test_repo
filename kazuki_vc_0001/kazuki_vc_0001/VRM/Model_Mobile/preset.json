@@ -1,0 +1,825 @@
+{
+    "optimize": {
+        "mesh_split": [
+            {
+                "split_mesh_name": "Body",
+                "submesh_configurations": [
+                    {
+                        "material_name_condition": ".*LowerBody.*",
+                        "splited_mesh_names": "LowerBody"
+                    },
+                    {
+                        "material_name_condition": ".*UpperBody.*",
+                        "splited_mesh_names": "UpperBody"
+                    },
+                    {
+                        "material_name_condition": ".*Head.*",
+                        "splited_mesh_names": "Head"
+                    }
+                ],
+                "dispose_original_method": "MoveSceneRootAndHide"
+            }
+        ],
+        "blendshape_reduction": [
+            {
+                "@class": "save",
+                "mesh_name": "Head",
+                "blend_shape_names": [
+                    "Anim_Mouth_A",
+                    "Anim_Mouth_I",
+                    "Anim_Mouth_U",
+                    "Anim_Mouth_E",
+                    "Anim_Mouth_O",
+                    "Anim_Eye_EyeClose",
+                    "Anim_Eye_EyeClose_L",
+                    "Anim_Eye_EyeClose_R",
+                    "Anim_Emotion_Joy",
+                    "Anim_Emotion_Anger",
+                    "Anim_Emotion_Sorrow",
+                    "Anim_Emotion_Smile"
+                ]
+            },
+            {
+                "@class": "save",
+                "mesh_name": "UpperBody",
+                "blend_shape_names": [
+                    "Anim_Mouth_A",
+                    "Anim_Mouth_I",
+                    "Anim_Mouth_U",
+                    "Anim_Mouth_E",
+                    "Anim_Mouth_O",
+                    "Anim_Emotion_Joy",
+                    "Anim_Emotion_Anger",
+                    "Anim_Emotion_Sorrow",
+                    "Anim_Emotion_Smile"
+                ]
+            },
+            {
+                "@class": "save",
+                "mesh_name": "LowerBody",
+                "blend_shape_names": []
+            },
+            {
+                "@class": "save",
+                "mesh_name": "Eye",
+                "blend_shape_names": [
+                    "Anim_Eye_EyeClose",
+                    "Anim_Eye_EyeClose_L",
+                    "Anim_Eye_EyeClose_R"
+                ]
+            },
+            {
+                "@class": "save",
+                "mesh_name": "Mouth",
+                "blend_shape_names": [
+                    "Anim_Mouth_A",
+                    "Anim_Mouth_E",
+                    "Anim_Mouth_O"
+                ]
+            },
+            {
+                "@class": "save",
+                "mesh_name": "Tongue",
+                "blend_shape_names": [
+                    "Anim_Mouth_A",
+                    "Anim_Mouth_E",
+                    "Anim_Mouth_O"
+                ]
+            }
+        ],
+        "texture_resize": [
+            {
+                "owner_material_name": "M_Head",
+                "commands": [
+                    {
+                        "texture_property_name": "_MainTex",
+                        "fixed_width": 1024,
+                        "fixed_height": 1024
+                    },
+                    {
+                        "texture_property_name": "_BumpMap",
+                        "fixed_width": 256,
+                        "fixed_height": 256
+                    }
+                ]
+            },
+            {
+                "owner_material_name": "M_UpperBody",
+                "commands": [
+                    {
+                        "texture_property_name": "_MainTex",
+                        "fixed_width": 1024,
+                        "fixed_height": 1024
+                    },
+                    {
+                        "texture_property_name": "_BumpMap",
+                        "fixed_width": 256,
+                        "fixed_height": 256
+                    }
+                ]
+            },
+            {
+                "owner_material_name": "M_LowerBody",
+                "commands": [
+                    {
+                        "texture_property_name": "_MainTex",
+                        "fixed_width": 1024,
+                        "fixed_height": 1024
+                    },
+                    {
+                        "texture_property_name": "_BumpMap",
+                        "fixed_width": 256,
+                        "fixed_height": 256
+                    }
+                ]
+            },
+            {
+                "owner_material_name": "M_Mouth",
+                "commands": [
+                    {
+                        "texture_property_name": "_MainTex",
+                        "fixed_width": 256,
+                        "fixed_height": 256
+                    },
+                    {
+                        "texture_property_name": "_BumpMap",
+                        "fixed_width": 256,
+                        "fixed_height": 256
+                    }
+                ]
+            },
+            {
+                "owner_material_name": "M_Eye",
+                "commands": [
+                    {
+                        "texture_property_name": "_MainTex",
+                        "fixed_width": 256,
+                        "fixed_height": 256
+                    },
+                    {
+                        "texture_property_name": "_EmissionMap",
+                        "fixed_width": 128,
+                        "fixed_height": 128
+                    }
+                ]
+            }
+        ],
+        "bone_remove": {
+            "removable_bone_names": [
+                "mask_socket_01",
+                "hair_socket_01",
+                "cap_socket_01",
+                "eyepatch_socket_01_l",
+                "eyepatch_socket_01_r",
+                "thumbring_socket_01_l",
+                "indexring_socket_01_l",
+                "pinkyring_socket_01_l",
+                "middlering_socket_01_l",
+                "ringring_socket_01_l",
+                "item_socket_01_l",
+                "wrist_socket_01_l",
+                "thumbring_socket_01_r",
+                "indexring_socket_01_r",
+                "pinkyring_socket_01_r",
+                "middlering_socket_01_r",
+                "ringring_socket_01_r",
+                "item_socket_01_r",
+                "wrist_socket_01_r",
+                "necklace_socket_01",
+                "back_socket_01",
+                "earring_socket_01_l",
+                "earring_socket_01_r"
+            ]
+        }
+    },
+    "setup": {
+        "@class": "vrm",
+        "material": [
+            {
+                "material_name": "all",
+                "properties": [
+                    {
+                        "@class": "texture",
+                        "property_name": "_ShadeTexture",
+                        "source_type": "MaterialSocketName",
+                        "source_name": "_MainTex"
+                    },
+                    {
+                        "@class": "texture",
+                        "property_name": "_EmissionMap",
+                        "source_type": "None"
+                    },
+                    {
+                        "@class": "color",
+                        "property_name": "_EmissionColor",
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "a": 255
+                    },
+                    {
+                        "@class": "texture",
+                        "property_name": "_BumpMap",
+                        "source_type": "None"
+                    }
+                ]
+            }
+        ],
+        "t_pose": {
+            "transforms": [
+                {
+                    "name": "thigh_l",
+                    "commands": [
+                        {
+                            "axis": "X",
+                            "space": "Self",
+                            "value": 7.548959
+                        }
+                    ]
+                },
+                {
+                    "name": "thigh_r",
+                    "commands": [
+                        {
+                            "axis": "X",
+                            "space": "Self",
+                            "value": 7.557736
+                        }
+                    ]
+                },
+                {
+                    "name": "clavicle_l",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "World",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "name": "upperarm_l",
+                    "commands": [
+                        {
+                            "axis": "X",
+                            "space": "Self",
+                            "value": -48.0
+                        }
+                    ]
+                },
+                {
+                    "name": "lowerarm_l",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": 28.0
+                        },
+                        {
+                            "axis": "X",
+                            "space": "Self",
+                            "value": 7.322
+                        }
+                    ]
+                },
+                {
+                    "name": "hand_l",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": 0.9613881
+                        }
+                    ]
+                },
+                {
+                    "name": "index_01_l",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": 31.4389
+                        }
+                    ]
+                },
+                {
+                    "name": "middle_01_l",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": 32.9698
+                        }
+                    ]
+                },
+                {
+                    "name": "ring_01_l",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": 32.5083
+                        }
+                    ]
+                },
+                {
+                    "name": "pinky_01_l",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": 31.9264
+                        }
+                    ]
+                },
+                {
+                    "name": "clavicle_r",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "World",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                {
+                    "name": "upperarm_r",
+                    "commands": [
+                        {
+                            "axis": "X",
+                            "space": "Self",
+                            "value": -48.0
+                        }
+                    ]
+                },
+                {
+                    "name": "lowerarm_r",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": -28.0
+                        },
+                        {
+                            "axis": "X",
+                            "space": "Self",
+                            "value": 7.322
+                        }
+                    ]
+                },
+                {
+                    "name": "hand_r",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": -0.9613881
+                        }
+                    ]
+                },
+                {
+                    "name": "index_01_r",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": -31.4389
+                        }
+                    ]
+                },
+                {
+                    "name": "middle_01_r",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": -32.9698
+                        }
+                    ]
+                },
+                {
+                    "name": "ring_01_r",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": -32.5083
+                        }
+                    ]
+                },
+                {
+                    "name": "pinky_01_r",
+                    "commands": [
+                        {
+                            "axis": "Z",
+                            "space": "Self",
+                            "value": -31.9264
+                        }
+                    ]
+                }
+            ],
+            "fix_clavicle_rotation": false
+        },
+        "blendshape": {
+            "groups": {
+                "neutral": {},
+                "a": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Mouth_A",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Mouth_A",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Mouth",
+                            "blend_shape_name": "Anim_Mouth_A",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Tongue",
+                            "blend_shape_name": "Anim_Mouth_A",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "i": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Mouth_I",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Mouth_I",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "u": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Mouth_U",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Mouth_U",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "e": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Mouth_E",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Mouth_E",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Mouth",
+                            "blend_shape_name": "Anim_Mouth_E",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Tongue",
+                            "blend_shape_name": "Anim_Mouth_E",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "o": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Mouth_O",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Mouth_O",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Mouth",
+                            "blend_shape_name": "Anim_Mouth_O",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Tongue",
+                            "blend_shape_name": "Anim_Mouth_O",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "blink": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Eye_EyeClose",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Eye",
+                            "blend_shape_name": "Anim_Eye_EyeClose",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "joy": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Emotion_Joy",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Emotion_Joy",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "angry": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Emotion_Anger",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Emotion_Anger",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "sorrow": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Emotion_Sorrow",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Emotion_Sorrow",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "fun": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Emotion_Smile",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "UpperBody",
+                            "blend_shape_name": "Anim_Emotion_Smile",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "look_up": {},
+                "look_down": {},
+                "look_left": {},
+                "look_right": {},
+                "blink_l": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Eye_EyeClose_L",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Eye",
+                            "blend_shape_name": "Anim_Eye_EyeClose_L",
+                            "weight": 100.0
+                        }
+                    ]
+                },
+                "blink_r": {
+                    "bindings": [
+                        {
+                            "mesh_name": "Head",
+                            "blend_shape_name": "Anim_Eye_EyeClose_R",
+                            "weight": 100.0
+                        },
+                        {
+                            "mesh_name": "Eye",
+                            "blend_shape_name": "Anim_Eye_EyeClose_R",
+                            "weight": 100.0
+                        }
+                    ]
+                }
+            }
+        },
+        "humanoid": {
+            "arm_stretch": 0.05,
+            "leg_stretch": 0.05,
+            "upper_arm_twist": 0.5,
+            "lower_arm_twist": 0.5,
+            "upper_leg_twist": 0.5,
+            "lower_leg_twist": 0.5,
+            "feet_spacing": 0.0,
+            "has_translation_dof": false,
+            "bone_mapping": {
+                "hips": "pelvis",
+                "left_upper_leg": "thigh_l",
+                "right_upper_leg": "thigh_r",
+                "left_lower_leg": "calf_l",
+                "right_lower_leg": "calf_r",
+                "left_foot": "foot_l",
+                "right_foot": "foot_r",
+                "spine": "spine_01",
+                "chest": "spine_02",
+                "neck": "neck",
+                "head": "head",
+                "left_shoulder": "clavicle_l",
+                "right_shoulder": "clavicle_r",
+                "left_upper_arm": "upperarm_l",
+                "right_upper_arm": "upperarm_r",
+                "left_lower_arm": "lowerarm_l",
+                "right_lower_arm": "lowerarm_r",
+                "left_hand": "hand_l",
+                "right_hand": "hand_r",
+                "left_toes": "ball_l",
+                "right_toes": "ball_r",
+                "left_eye": "eye_root_l",
+                "right_eye": "eye_root_r",
+                "jaw": "",
+                "left_thumb_proximal": "thumb_01_l",
+                "left_thumb_intermediate": "thumb_02_l",
+                "left_thumb_distal": "thumb_03_l",
+                "left_index_proximal": "index_01_l",
+                "left_index_intermediate": "index_02_l",
+                "left_index_distal": "index_03_l",
+                "left_middle_proximal": "middle_01_l",
+                "left_middle_intermediate": "middle_02_l",
+                "left_middle_distal": "middle_03_l",
+                "left_ring_proximal": "ring_01_l",
+                "left_ring_intermediate": "ring_02_l",
+                "left_ring_distal": "ring_03_l",
+                "left_little_proximal": "pinky_01_l",
+                "left_little_intermediate": "pinky_02_l",
+                "left_little_distal": "pinky_03_l",
+                "right_thumb_proximal": "thumb_01_r",
+                "right_thumb_intermediate": "thumb_02_r",
+                "right_thumb_distal": "thumb_03_r",
+                "right_index_proximal": "index_01_r",
+                "right_index_intermediate": "index_02_r",
+                "right_index_distal": "index_03_r",
+                "right_middle_proximal": "middle_01_r",
+                "right_middle_intermediate": "middle_02_r",
+                "right_middle_distal": "middle_03_r",
+                "right_ring_proximal": "ring_01_r",
+                "right_ring_intermediate": "ring_02_r",
+                "right_ring_distal": "ring_03_r",
+                "right_little_proximal": "pinky_01_r",
+                "right_little_intermediate": "pinky_02_r",
+                "right_little_distal": "pinky_03_r",
+                "upper_chest": "spine_03"
+            }
+        },
+        "first_person": {
+            "first_person_bone_name": "head",
+            "first_person_bone_offset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "mesh_annotations": [
+                {
+                    "mesh_name": "Head",
+                    "flag": "ThirdPersonOnly"
+                },
+                {
+                    "mesh_name": "Eye",
+                    "flag": "ThirdPersonOnly"
+                },
+                {
+                    "mesh_name": "EyeHole_R",
+                    "flag": "ThirdPersonOnly"
+                },
+                {
+                    "mesh_name": "EyeHole_L",
+                    "flag": "ThirdPersonOnly"
+                },
+                {
+                    "mesh_name": "Mouth",
+                    "flag": "ThirdPersonOnly"
+                },
+                {
+                    "mesh_name": "Tongue",
+                    "flag": "ThirdPersonOnly"
+                },
+                {
+                    "mesh_name": "Hair",
+                    "flag": "ThirdPersonOnly"
+                }
+            ],
+            "look_at_type": "Bone",
+            "left_eye_bone_name": "eye_root_l",
+            "right_eye_bone_name": "eye_root_r",
+            "look_at_horizontal_inner": {
+                "curve": {
+                    "keyframes": [
+                        {
+                            "time": 0.0,
+                            "value": 0.0
+                        },
+                        {
+                            "time": 1.0,
+                            "value": 1.0
+                        }
+                    ],
+                    "pre_wrap_mode": "ClampForever",
+                    "post_wrap_mode": "ClampForever"
+                },
+                "x_range": 90.0,
+                "y_range": 30.0
+            },
+            "look_at_horizontal_outer": {
+                "curve": {
+                    "keyframes": [
+                        {
+                            "time": 0.0,
+                            "value": 0.0
+                        },
+                        {
+                            "time": 1.0,
+                            "value": 1.0
+                        }
+                    ],
+                    "pre_wrap_mode": "ClampForever",
+                    "post_wrap_mode": "ClampForever"
+                },
+                "x_range": 90.0,
+                "y_range": 30.0
+            },
+            "look_at_vertical_down": {
+                "curve": {
+                    "keyframes": [
+                        {
+                            "time": 0.0,
+                            "value": 0.0
+                        },
+                        {
+                            "time": 1.0,
+                            "value": 1.0
+                        }
+                    ],
+                    "pre_wrap_mode": "ClampForever",
+                    "post_wrap_mode": "ClampForever"
+                },
+                "x_range": 30.0,
+                "y_range": 10.0
+            },
+            "look_at_vertical_up": {
+                "curve": {
+                    "keyframes": [
+                        {
+                            "time": 0.0,
+                            "value": 0.0
+                        },
+                        {
+                            "time": 1.0,
+                            "value": 1.0
+                        }
+                    ],
+                    "pre_wrap_mode": "ClampForever",
+                    "post_wrap_mode": "ClampForever"
+                },
+                "x_range": 30.0,
+                "y_range": 8.0
+            }
+        },
+        "meta": {
+            "title": "",
+            "version": "0.8",
+            "author": "pocket RD Inc.",
+            "contact_information": "https://pocket-rd.com",
+            "reference": "",
+            "allowed_user": "OnlyAuthor",
+            "violent_ussage": "Disallow",
+            "sexual_ussage": "Disallow",
+            "commercial_ussage": "Disallow",
+            "other_permission_url": "",
+            "license_type": "Redistribution_Prohibited",
+            "other_license_url": ""
+        }
+    }
+}

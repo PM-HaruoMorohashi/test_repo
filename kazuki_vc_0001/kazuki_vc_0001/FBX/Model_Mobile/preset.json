@@ -1,0 +1,79 @@
+{
+    "optimize": {
+        "mesh_remove": {
+            "mesh_names": [
+                "Eyelash"
+            ]
+        },
+        "blendshape_reduction": [
+            {
+                "@class": "save",
+                "mesh_name": "Body",
+                "blend_shape_names": [
+                    "Anim_Mouth_A",
+                    "Anim_Mouth_I",
+                    "Anim_Mouth_U",
+                    "Anim_Mouth_E",
+                    "Anim_Mouth_O",
+                    "Anim_Eye_EyeClose",
+                    "Anim_Emotion_Joy",
+                    "Anim_Emotion_Anger",
+                    "Anim_Emotion_Sorrow",
+                    "Anim_Emotion_Smile"
+                ]
+            },
+            {
+                "@class": "save",
+                "mesh_name": "Eye",
+                "blend_shape_names": [
+                    "Anim_Eye_EyeClose"
+                ]
+            },
+            {
+                "@class": "save",
+                "mesh_name": "Mouth",
+                "blend_shape_names": [
+                    "Anim_Mouth_A",
+                    "Anim_Mouth_E",
+                    "Anim_Mouth_O"
+                ]
+            },
+            {
+                "@class": "save",
+                "mesh_name": "Tongue",
+                "blend_shape_names": [
+                    "Anim_Mouth_A",
+                    "Anim_Mouth_E",
+                    "Anim_Mouth_O"
+                ]
+            }
+        ],
+        "bone_remove": {
+            "removable_bone_names": [
+                "mask_socket_01",
+                "hair_socket_01",
+                "cap_socket_01",
+                "eyepatch_socket_01_l",
+                "eyepatch_socket_01_r",
+                "thumbring_socket_01_l",
+                "indexring_socket_01_l",
+                "pinkyring_socket_01_l",
+                "middlering_socket_01_l",
+                "ringring_socket_01_l",
+                "item_socket_01_l",
+                "wrist_socket_01_l",
+                "thumbring_socket_01_r",
+                "indexring_socket_01_r",
+                "pinkyring_socket_01_r",
+                "middlering_socket_01_r",
+                "ringring_socket_01_r",
+                "item_socket_01_r",
+                "wrist_socket_01_r",
+                "necklace_socket_01",
+                "back_socket_01",
+                "earring_socket_01_l",
+                "earring_socket_01_r"
+            ]
+        }
+    }
+}
